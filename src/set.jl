@@ -33,14 +33,14 @@ arrays have extra information.
 """
 function startcount(i::Array{Int},d::Array{Int})
 	# could sort sort!(i) but would want to preserve order in d
-	global iters = [i,Inf;] # add Inf to avoid a check failure
-	global d_vec = [d,d[end];] # repeat last forever
+	global iters = vcat(i,Inf) # add Inf to avoid a check failure
+	global d_vec = vcat(d,d[end]) # repeat last forever
 	return
 end
 
 function startcount()
 	# Sets Defaults
-	global iters = [10,50,500,Inf;]
-	global d_vec = [1,5,50,500;]
+	global iters = vcat(10,50,500,Inf)
+	global d_vec = vcat(1,5,50,500)
 	return
 end

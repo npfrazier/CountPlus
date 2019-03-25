@@ -1,0 +1,7 @@
+name = "CountPlus"
+uuid = "d85dd604-4f3a-11e9-3a91-13849d8b81c8"
+authors = ["Nick Frazier <nfrazier@fdic.gov>"]
+version = "0.1.0"
+
+[deps]
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"

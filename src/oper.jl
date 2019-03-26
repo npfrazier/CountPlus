@@ -28,13 +28,13 @@ end
 function countplus!(f::Float64)
   # Announce iteration and fval
   global C += 1
-  check() ? println("Eval ",C,": value = ",round(f,5))  : ""
+  check() ? println("Eval ",C,": value = ",round(f,digits=5))  : ""
   return C
 end
 
 function countplus!(f::Float64,p::Union{Float64,Array{Float64}})
   # Announce iteration, fval, and pvec
   global C += 1
-  check() ? println("Eval ",C," value = ",round(f,5),"\npvec = ",round.(p,5)) : ""
+  check() ? println("Eval ",C," value = ",round(f,digits=5),"\npvec = ",round.(p,digits=5)) : ""
   return C
 end
